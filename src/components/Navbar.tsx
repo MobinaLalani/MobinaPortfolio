@@ -16,7 +16,6 @@ export default function Navbar() {
           Mobina Portfolio
         </Link>
 
-        {/* منو دسکتاپ */}
         <nav className="hidden md:flex flex-1 justify-center gap-6 text-sm text-foreground">
           <Link href="/projects" className="hover:text-primary">
             Projects
@@ -28,25 +27,22 @@ export default function Navbar() {
             Contact
           </Link>
         </nav>
-
-        {/* دکمه رزومه دسکتاپ */}
         <div className="hidden md:block">
           <a
-            href="/resume.pdf"
-            download
-            className="bg-black text-white px-4 py-2 rounded-md hover:bg-primary/80 FjallaOneّFont transition font-fjalla"
+            href="/resumeFile/MobinaLalaniFrontendDeveloper.pdf"
+            download="Mobina_Lalani_Frontend_Developer.pdf"
+              className="bg-black text-white px-4 py-2 rounded-md hover:bg-primary/80 FjallaOneّFont transition font-fjalla"
           >
             Download Resume
+          
           </a>
         </div>
-
-        {/* دکمه همبرگر موبایل */}
         <button
           className="md:hidden w-8 h-8 flex items-center justify-center"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            // X icon
+    
             <svg
               className="w-6 h-6 text-foreground"
               fill="none"

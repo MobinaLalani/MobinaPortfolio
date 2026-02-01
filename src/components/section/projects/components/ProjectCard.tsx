@@ -1,6 +1,8 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
+  id: number;
   title: string;
   description: string;
   image: string;
@@ -9,14 +11,19 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   title,
   description,
   image,
   technologies,
   demoLink,
 }) => {
+  const router = useRouter();
   return (
-    <div className="max-w-md border-2 border-black bg-white shadow-[6px_6px_0_0_#000]">
+    <div
+      onClick={() => router.push(`/projects/${id}`)}
+      className="max-w-md border-2 border-black bg-white shadow-[6px_6px_0_0_#000]"
+    >
       {/* Image */}
       <div className="relative border-b-2 border-black">
         <img src={image} alt={title} className="w-full h-48 object-cover" />

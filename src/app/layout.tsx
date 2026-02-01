@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className={` ${geistMono.variable} antialiased overflow-x  `}>
         <Navbar/>
         <SmoothScrollProvider>
-           <div className="pt-18">
+           <div className="py-18">
           {" "}
           {children}
         </div>

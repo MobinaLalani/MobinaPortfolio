@@ -5,6 +5,7 @@ import ArrowIcon from "@/components/ui/icons/ArrowIcon";
 
 const projects = [
   {
+    id: 1,
     title: "URL Shortener",
     description:
       "This project is a responsive website that shows Shortly which ",
@@ -13,6 +14,7 @@ const projects = [
     demoLink: "https://example.com",
   },
   {
+    id: 2,
     title: "Task Manager",
     description: "A simple task manager app built with React and TypeScript.",
     image: "/image/managementPic/AdminDashboard.png",
@@ -20,6 +22,7 @@ const projects = [
     demoLink: "https://example.com/task-manager",
   },
   {
+    id: 3,
     title: "Portfolio Website",
     description:
       "My personal portfolio website to showcase projects and skills.",
@@ -28,6 +31,7 @@ const projects = [
     demoLink: "https://example.com/portfolio",
   },
   {
+    id: 4,
     title: "Blog Platform",
     description: "A blogging platform built with Next.js and Markdown support.",
     image: "/image/managementPic/AdminDashboard.png",
@@ -67,8 +71,6 @@ export default function ProjectIndex() {
       >
         <ArrowIcon className="h-11 w-11 rotate-90" />
       </button>
-
-      {/* اسلایدر */}
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
@@ -84,7 +86,6 @@ export default function ProjectIndex() {
         </div>
       </div>
 
-      {/* فلش راست */}
       <button
         onClick={nextProject}
         className="absolute -right-20 top-1/2 -translate-y-1/2 
