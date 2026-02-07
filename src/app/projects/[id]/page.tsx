@@ -1,4 +1,5 @@
 import PhotoSlider from "@/components/ui/photoSlider/PhotoSlider";
+import ProjectIndex from "@/components/section/project/Index";
 type Props = {
   params: Promise<{
     id: string;
@@ -10,8 +11,9 @@ const ProjectPage = async ({ params }: Props) => {
 
   console.log("Id:", id); // ← تو ترمینال
   return <>
-    <div>Project ID: {id}</div>
-    <PhotoSlider />
+    {/* <div>Project ID: {id}</div>
+    <PhotoSlider /> */}
+    <ProjectIndex projectId ={Number(id)}/>
   </>;
 
   

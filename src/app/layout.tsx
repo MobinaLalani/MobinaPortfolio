@@ -31,13 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${geistMono.variable} antialiased overflow-x  `}>
-        <Navbar/>
+        <Navbar />
         <SmoothScrollProvider>
-           <div className="py-18">
-          {" "}
-          {children}
-        </div>
-          </SmoothScrollProvider>
+     
+          <div className="py-18 max-h-[97vh] ">
+            {" "}
+            {children}
+          </div>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

@@ -1,11 +1,12 @@
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData; // می‌تواند string یا import image باشد
   technologies: string[];
   demoLink?: string;
 }
@@ -19,14 +20,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   demoLink,
 }) => {
   const router = useRouter();
+
   return (
     <div
       onClick={() => router.push(`/projects/${id}`)}
-      className="max-w-md border-2 border-black bg-white shadow-[6px_6px_0_0_#000]"
+      className="max-w-md border-2 border-black bg-white shadow-[6px_6px_0_0_#000] cursor-pointer"
     >
       {/* Image */}
-      <div className="relative border-b-2 border-black">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="relative border-b-2 border-black h-48 w-full">
+        <Image
+          src={typeof image === "string" ? image : image.src} // اگر string بود مستقیم بده، اگر import بود از src استفاده کن
+          alt={title}
+          fill
+          className="object-cover"
+        />
 
         {/* Gray Overlay */}
         <div className="absolute inset-0 bg-gray-900/40" />

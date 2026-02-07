@@ -15,6 +15,15 @@
     font-style: normal;
 }
 
+/* ===== Hide Scrollbar but keep scroll ===== */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 :root {
   --background: #EBDBC1;
   --foreground: #0e0e10;
@@ -51,14 +60,14 @@
   }
 }
 
-.scroll-container {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+/* .scroll-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
+  display: none;
+} */
 
 body {
   background: var(--background);
